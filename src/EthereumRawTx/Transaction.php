@@ -198,7 +198,7 @@ class Transaction
         }
 
         /** @var string $serialized */
-        $serialized = '';
+        $serialized = null;
         /** @var int $recId */
         $recId = 0;
         secp256k1_ecdsa_recoverable_signature_serialize_compact($context, $signature, $serialized, $recId);
