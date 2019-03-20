@@ -192,7 +192,7 @@ class Transaction
         }
 
         /** @var resource $signature */
-        $signature = '';
+        $signature = null;
         if (secp256k1_ecdsa_sign_recoverable($context, $signature, $hash->getBinary(), $privateKey->getBinary()) != 1) {
             throw new \Exception("Failed to create signature");
         }
